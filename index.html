@@ -67,6 +67,34 @@ footer{padding:40px 0 64px;color:var(--mut);font-size:.9rem}
 <ul><li>The 0.9999 came from predicting a price using the same day's prices.</li><li>No model beat a random-walk benchmark, in error or direction.</li></ul>
 <a href="https://github.com/TimothyRimu/apple-stock-forecasting">Code and notebook →</a></article>
 
+<article class="card"><h3>Electricity load forecasting</h3>
+<div class="tag">Time series · walk-forward validation · energy</div>
+<p>Can day-ahead hourly demand for a 172-meter energy cooperative be forecast better than "same hour yesterday"?</p>
+<div class="k"><div><b>22% lower error</b>Gradient boosting vs the best naive baseline (MAE 0.0072 vs 0.0093)</div><div><b>~6%</b>Extra accuracy from weather features (ablation)</div></div>
+<ul><li>Found that the number of reporting meters swings from 150 to 40, so I forecast the per-meter average to avoid fake drops.</li><li>Stated plainly that observed weather flatters a real deployment.</li></ul>
+<a href="https://github.com/TimothyRimu/energy-load-forecasting">Code and write-up →</a></article>
+
+<article class="card"><h3>COVID-19 tweet sentiment</h3>
+<div class="tag">NLP · text classification · 45k tweets</div>
+<p>Can sentiment be classified from tweet text, and how fine-grained can it get?</p>
+<div class="k"><div><b>78.4%</b>3-class accuracy vs 40.7% majority baseline</div><div><b>54.2%</b>5-class accuracy vs 24.9% baseline</div></div>
+<ul><li>44% of 5-class mistakes are Positive vs Extremely Positive (or the negative pair).</li><li>TF-IDF fitted inside each fold; test set scored once.</li></ul>
+<a href="https://github.com/TimothyRimu/covid-tweet-sentiment">Code and write-up →</a></article>
+
+<article class="card"><h3>Walmart weekly sales</h3>
+<div class="tag">Regression · validation design · retail</div>
+<p>What drives store sales, and how much does the validation method change the answer?</p>
+<div class="k"><div><b>5.9% vs 8.3%</b>Error of best model vs store-average baseline (time split)</div><div><b>+61%</b>Week 51 sales vs a store's average</div></div>
+<ul><li>Weather, fuel price, CPI and unemployment add essentially nothing.</li><li>Random-split scores (4.1%) were optimistic; new stores cannot be forecast from these columns.</li></ul>
+<a href="https://github.com/TimothyRimu/walmart-sales-forecasting">Code and write-up →</a></article>
+
+<article class="card"><h3>Car price regression</h3>
+<div class="tag">Regression · small-data validation</div>
+<p>What drives car prices, and does the model hold up on brands it has not seen?</p>
+<div class="k"><div><b>R² 0.92</b>Random forest, 25 repeated CV scores</div><div><b>R² 0.74</b>When whole brands are held out</div></div>
+<ul><li>Engine size and weight dominate; brand adds little once specs are known.</li><li>Cleaned brand typos (maxda, porcshce, vokswagen, vw).</li></ul>
+<a href="https://github.com/TimothyRimu/car-price-regression">Code and write-up →</a></article>
+
 <article class="card"><h3>Power BI dashboards</h3>
 <div class="tag">Reporting · interactive visuals</div>
 <p>An iFood campaign-overview dashboard and a sales and profit dashboard (KPI cards, drill-down time series, waterfall, treemap, slicers).</p>
