@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Timothy Rimu | Data Analyst &amp; Data Scientist</title>
+<meta name="description" content="Portfolio of Timothy Rimu: data analyst and data scientist in Nakuru, Kenya, open to remote roles.">
+<style>
+:root{--bg:#fafaf7;--fg:#1c1c1a;--mut:#5f5f5a;--card:#fff;--line:#e4e2da;--acc:#0b6b5a}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--fg:#efeee8;--mut:#a3a29a;--card:#1d1d1b;--line:#2f2f2c;--acc:#4fc3a8}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.w{max-width:880px;margin:0 auto;padding:0 20px}
+header{padding:72px 0 32px}h1{font-size:clamp(2rem,6vw,3rem);line-height:1.1;margin:0 0 12px}
+.lead{font-size:1.15rem;color:var(--mut);max-width:620px}
+a{color:var(--acc)}.btn{display:inline-block;margin:18px 12px 0 0;padding:10px 18px;border:1px solid var(--acc);border-radius:8px;text-decoration:none;font-weight:600}
+.btn.p{background:var(--acc);color:var(--bg)}
+h2{font-size:1.4rem;margin:48px 0 16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;margin-bottom:18px}
+.card h3{margin:0 0 4px;font-size:1.2rem}.tag{color:var(--mut);font-size:.9rem;margin-bottom:10px}
+ul{padding-left:20px;margin:8px 0}li{margin:4px 0}
+.chips span{display:inline-block;border:1px solid var(--line);border-radius:20px;padding:2px 12px;margin:3px 4px 3px 0;font-size:.9rem;background:var(--card)}
+.k{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:14px 0}
+.k div{border-left:3px solid var(--acc);padding-left:12px}.k b{display:block;font-size:1.5rem}
+footer{padding:40px 0 64px;color:var(--mut);font-size:.9rem}
+</style></head><body><div class="w">
+<header><h1>Timothy Rimu</h1>
+<p class="lead">Data analyst and data scientist in Nakuru, Kenya, open to remote roles. I turn messy data into analysis people can trust, and I report what did not work as plainly as what did.</p>
+<a class="btn p" href="https://github.com/TimothyRimu">GitHub</a><a class="btn" href="#projects">See projects</a></header>
+
+<section id="projects"><h2>Projects</h2>
+<article class="card"><h3>Kenya bank profitability, 2004–2015</h3>
+<div class="tag">Panel econometrics · machine learning · 84 bank-years</div>
+<p>What drives profitability at seven Kenyan banks, and does machine learning predict it better than a regression?</p>
+<div class="k"><div><b>−0.24</b>Cost-to-income effect on ROAA, robust in all six specifications</div><div><b>0.46 vs 0.70</b>Out-of-time MAE: fixed effects vs XGBoost</div></div>
+<ul><li>Used wild-cluster bootstrap because seven clusters make standard errors unreliable.</li><li>Showed the positive NPL coefficient is not robust, so it is not interpreted causally.</li><li>Concluded the simple model wins and the early-warning classifier is not good enough to use.</li></ul>
+<a href="https://github.com/TimothyRimu/Kenya_Bank_Analysis">Code and full notebook →</a></article>
+
+<article class="card"><h3>INX employee performance</h3>
+<div class="tag">Classification · data-leakage audit · Streamlit app</div>
+<p>Which factors drive employee performance ratings, and can they be predicted?</p>
+<div class="k"><div><b>92%</b>Honest accuracy vs 72.8% always-guess baseline</div><div><b>98.7% → 92%</b>Leaky evaluation corrected (66% of test rows were duplicates)</div></div>
+<ul><li>Top drivers: last salary hike, environment satisfaction, time since promotion.</li><li>Pre-hire data predicts no better than chance, so the model is for current staff only.</li><li>Rebuilt the Streamlit app with honest metrics and a not-for-hiring warning.</li></ul>
+<a href="https://github.com/TimothyRimu/INX-Future-Inc">Code, notebook and app →</a></article></section>
+
+<section><h2>Skills</h2><div class="chips"><span>Python</span><span>pandas</span><span>scikit-learn</span><span>statsmodels</span><span>XGBoost</span><span>SHAP</span><span>Panel regression</span><span>Cross-validation</span><span>Streamlit</span><span>Power BI</span><span>Tableau</span><span>Git</span></div></section>
+
+<section><h2>About</h2><p>Certified through AFRICDSA's Certified Data Scientist/Analyst programme. I also run Phaneros Consulting Services, so I am used to turning a business question into an analysis and a clear recommendation.</p></section>
+<footer>© Timothy Rimu · <a href="https://github.com/TimothyRimu">github.com/TimothyRimu</a></footer>
+</div></body></html>
