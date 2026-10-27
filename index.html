@@ -37,9 +37,42 @@ footer{padding:40px 0 64px;color:var(--mut);font-size:.9rem}
 <p>Which factors drive employee performance ratings, and can they be predicted?</p>
 <div class="k"><div><b>92%</b>Honest accuracy vs 72.8% always-guess baseline</div><div><b>98.7% → 92%</b>Leaky evaluation corrected (66% of test rows were duplicates)</div></div>
 <ul><li>Top drivers: last salary hike, environment satisfaction, time since promotion.</li><li>Pre-hire data predicts no better than chance, so the model is for current staff only.</li><li>Rebuilt the Streamlit app with honest metrics and a not-for-hiring warning.</li></ul>
-<a href="https://github.com/TimothyRimu/INX-Future-Inc">Code, notebook and app →</a></article></section>
+<a href="https://github.com/TimothyRimu/INX-Future-Inc">Code, notebook and app →</a></article>
 
-<section><h2>Skills</h2><div class="chips"><span>Python</span><span>pandas</span><span>scikit-learn</span><span>statsmodels</span><span>XGBoost</span><span>SHAP</span><span>Panel regression</span><span>Cross-validation</span><span>Streamlit</span><span>Power BI</span><span>Tableau</span><span>Git</span></div></section>
+<article class="card"><h3>iFood campaign targeting</h3>
+<div class="tag">Classification · marketing analytics · profit analysis</div>
+<p>Who should the next marketing campaign target, and is targeting worth it?</p>
+<div class="k"><div><b>−1.31 → +0.59</b>Profit per customer: mail everyone vs target the top 18%</div><div><b>AUC 0.90</b>Cross-validated; logistic regression beat random forest and boosting</div></div>
+<ul><li>Past campaign acceptance and recent purchases are the strongest signals.</li><li>Contacting only customers above the 3/11 break-even reaches two-thirds of responders.</li><li>Removed 184 duplicate rows that would have leaked across folds.</li></ul>
+<a href="https://github.com/TimothyRimu/ifood-campaign-targeting">Code and notebook →</a></article>
+
+<article class="card"><h3>Loan approval prediction</h3>
+<div class="tag">Classification · repeated cross-validation · fairness check</div>
+<p>What actually drives a loan decision?</p>
+<div class="k"><div><b>80.9%</b>Accuracy from credit history alone (81.0% with all features)</div><div><b>0.705 → 0.75</b>ROC AUC: history only vs all features</div></div>
+<ul><li>Logistic regression matches random forest and boosting.</li><li>Gender and marital status add nothing and are excluded.</li><li>Imputation inside each fold, so no leakage.</li></ul>
+<a href="https://github.com/TimothyRimu/loan-approval-prediction">Code and notebook →</a></article>
+
+<article class="card"><h3>Diabetes risk: the cost of a data leak</h3>
+<div class="tag">Classification · leakage audit · screening thresholds</div>
+<p>How much does filling missing values with the outcome flatter a model?</p>
+<div class="k"><div><b>88% → 76%</b>Random forest accuracy: leaky vs honest imputation</div><div><b>57% → 78%</b>Diabetics found when the cut-off drops from 0.5 to 0.3</div></div>
+<ul><li>Glucose dominates; logistic regression matches the complex models.</li><li>Shows the sensitivity versus false-alarm trade-off for screening.</li></ul>
+<a href="https://github.com/TimothyRimu/Diabetes">Code and notebook →</a></article>
+
+<article class="card"><h3>Apple stock: can ML forecast tomorrow?</h3>
+<div class="tag">Time series · walk-forward evaluation</div>
+<p>The original model reported R² = 0.9999. Is it real?</p>
+<div class="k"><div><b>R² ≈ 0</b>Out-of-sample on next-day returns, 2017-2023</div><div><b>$3.91 vs $1.32</b>Random forest on price level vs "tomorrow = today"</div></div>
+<ul><li>The 0.9999 came from predicting a price using the same day's prices.</li><li>No model beat a random-walk benchmark, in error or direction.</li></ul>
+<a href="https://github.com/TimothyRimu/apple-stock-forecasting">Code and notebook →</a></article>
+
+<article class="card"><h3>Power BI dashboards</h3>
+<div class="tag">Reporting · interactive visuals</div>
+<p>An iFood campaign-overview dashboard and a sales and profit dashboard (KPI cards, drill-down time series, waterfall, treemap, slicers).</p>
+<a href="https://github.com/TimothyRimu/power-bi-dashboards">Files and descriptions →</a></article></section>
+
+<section><h2>Skills</h2><div class="chips"><span>Python</span><span>pandas</span><span>scikit-learn</span><span>statsmodels</span><span>XGBoost</span><span>SHAP</span><span>Panel regression</span><span>Cross-validation</span><span>Streamlit</span><span>Power BI</span><span>Git</span></div></section>
 
 <section><h2>About</h2><p>Certified through AFRICDSA's Certified Data Scientist/Analyst programme. I also run Phaneros Consulting Services, so I am used to turning a business question into an analysis and a clear recommendation.</p></section>
 <footer>© Timothy Rimu · <a href="https://github.com/TimothyRimu">github.com/TimothyRimu</a></footer>
